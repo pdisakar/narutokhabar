@@ -328,7 +328,7 @@ footer .footer-option a {
 }
 
 .contact-us {
-  background-image: url("./src/background/map.jpg");
+  background-image: url("../src/background/map.jpg");
   height: 79.2vh;
   display: flex;
   flex-direction: column;
