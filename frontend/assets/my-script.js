@@ -1,7 +1,5 @@
 
 // For Video slider
-console.log('Hey')
-
 function videoURL(videolink, index) {
   const videoElement = document.getElementById("video-slider");
   videoElement.src = videolink;
@@ -48,16 +46,36 @@ setInterval(changeVideo, 5000);
 
 
 // For News Body
-console.log("Hey ");
-// Add a script tag at the end of your body or in your external JavaScript file
-document.addEventListener("DOMContentLoaded", function () {
-  const articles = document.querySelectorAll(".artical_container article");
 
-  articles.forEach((article) => {
-    const newsBody = article.querySelector(".news-body");
+      document.addEventListener("DOMContentLoaded", function () {
+        const articles = document.querySelectorAll(".artical_container article");
 
-    article.addEventListener("click", function () {
-      newsBody.classList.toggle("hidden");
-    });
-  });
-});
+        articles.forEach((article) => {
+          const newsBody = article.querySelector(".news-body");
+
+          article.addEventListener("click", function () {
+            // Toggle the visibility of the clicked article's news body
+            newsBody.classList.toggle("hidden");
+
+            // Close other articles if they are open
+            articles.forEach((otherArticle) => {
+              if (otherArticle !== article) {
+                otherArticle.querySelector(".news-body").classList.add("hidden");
+              }
+            });
+          });
+        });
+
+        // Close the active article when clicking outside of any article
+        document.addEventListener("click", function (event) {
+          const isClickInsideArticle = articles.some((article) =>
+            article.contains(event.target)
+          );
+
+          if (!isClickInsideArticle) {
+            articles.forEach((article) => {
+              article.querySelector(".news-body").classList.add("hidden");
+            });
+          }
+        });
+      });

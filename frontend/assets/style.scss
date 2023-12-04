@@ -130,6 +130,7 @@ nav {
       article {
         width: 30rem;
         position: relative;
+
         .artical-image {
           height: 35rem;
           width: 100%;
@@ -162,12 +163,7 @@ nav {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(
-            255,
-            0,
-            0,
-            0.8
-          ); /* Adjust the color and transparency as needed */
+          background-color: white;
           z-index: 999;
           display: flex;
           flex-direction: column;
@@ -177,6 +173,9 @@ nav {
           box-sizing: border-box;
           font-size: 1.6rem;
           font-family: "Dosis", sans-serif;
+          border-radius: 5px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          overflow: auto;
         }
         .hidden {
           display: none;
@@ -190,7 +189,11 @@ nav {
         a {
           font-size: 1.3rem;
           font-family: "Dosis", sans-serif;
+          color: blue;
         }
+      }
+      :hover{
+        cursor: pointer;
       }
     }
     aside {
