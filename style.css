@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f4f4f4;
+  color: black;
+  text-decoration: none;
+}
+header a img {
+  width: 6rem;
+  height: 6rem;
+}
+header a h1 {
+  font-family: "Nova Square", sans-serif;
+  font-size: 3.4rem;
+  margin: 2rem 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  background-color: #fcba21;
+  padding: 2rem;
+  align-items: center;
+}
+nav ul li {
+  list-style-type: none;
+  font-size: 2rem;
+  font-family: "Dosis", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+}
+nav ul li span {
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  top: 60%;
+  width: 100%;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+  transition: 0.2s;
+}
+nav ul :hover span {
+  opacity: 0.7;
+}
+
+.hot_news {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.hot_news img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hot_news .hot_news_disc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  width: 50%;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+.hot_news .hot_news_disc .title {
+  font-size: 4rem;
+  font-family: "Nova Square", sans-serif;
+  color: #fcba21;
+}
+.hot_news .hot_news_disc .body {
+  font-size: 1.8rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  width: 80%;
+  font-family: "Dosis", sans-serif;
+}
+
+.general_news {
+  padding-top: 4rem;
+  margin: 0rem 5rem;
+  padding-bottom: 2rem;
+  background-color: #f6fbfc;
+}
+.general_news h2 {
+  text-align: center;
+  font-family: "Nova Square", sans-serif;
+  font-size: 2.8rem;
+}
+.general_news .news_wrapper {
+  display: flex;
+  padding-top: 3rem;
+  width: 100%;
+}
+.general_news .news_wrapper .artical_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 70%;
+}
+.general_news .news_wrapper .artical_container article {
+  width: 30rem;
+}
+.general_news .news_wrapper .artical_container article .artical-image {
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.general_news .news_wrapper .artical_container article .artical-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.general_news .news_wrapper .artical_container article .artical-image :hover {
+  transform: scale(1.2);
+}
+.general_news .news_wrapper .artical_container article p {
+  font-size: 1.6rem;
+  font-family: "Dosis", sans-serif;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.general_news .news_wrapper .artical_container article .date {
+  font-size: 1.3rem;
+  font-family: "Dosis", sans-serif;
+  margin-top: 1rem;
+  color: #484848;
+}
+.general_news .news_wrapper .artical_container article a {
+  font-size: 1.3rem;
+  font-family: "Dosis", sans-serif;
+}
+.general_news .news_wrapper aside {
+  width: 30%;
+}
+.general_news .news_wrapper aside img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.wanted_person {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  background-color: #fcf6f6;
+}
+.wanted_person h2 {
+  text-align: center;
+  font-family: "Nova Square", sans-serif;
+  font-size: 2.8rem;
+  padding-bottom: 3rem;
+}
+.wanted_person .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wanted_person .wrapper .slider {
+  height: 11rem;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.wanted_person .wrapper .slider .slide-track {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: 350rem;
+}
+.wanted_person .wrapper .slider .slide-track .slide {
+  height: 10rem;
+  width: 25rem;
+}
+.wanted_person .wrapper .slider .slide-track .slide img {
+  width: 80%;
+  height: 10rem;
+  border-radius: 1rem;
+  border: 2px solid #bbbbbb;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-175rem);
+  }
+}
+
+.our-leaders {
+  padding-bottom: 4rem;
+  background-color: #fcf6fc;
+}
+.our-leaders h2 {
+  text-align: center;
+  font-family: "Nova Square", sans-serif;
+  font-size: 2.8rem;
+  padding: 2rem 0;
+}
+.our-leaders .leader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.our-leaders .leader-container .bio-card {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.7rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.our-leaders .leader-container .bio-card .img-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.our-leaders .leader-container .bio-card .img-block img {
+  margin: 2rem 0rem;
+  width: 30rem;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.our-leaders .leader-container .bio-card .img-block span {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: -110%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  transform: skewX(10deg);
+}
+.our-leaders .leader-container .bio-card .img-block:hover span {
+  left: 120%;
+}
+.our-leaders .leader-container .bio-card .hokage {
+  background: linear-gradient(to bottom, white 50%, #cf5e5e 50%);
+}
+.our-leaders .leader-container .bio-card .kazekage {
+  background: linear-gradient(to bottom, white 50%, #4ad55d 50%);
+}
+.our-leaders .leader-container .bio-card .mizukage {
+  background: linear-gradient(to bottom, white 50%, #4853a0 50%);
+}
+.our-leaders .leader-container .bio-card .raikage {
+  background: linear-gradient(to bottom, white 50%, #bdcb59 50%);
+}
+.our-leaders .leader-container .bio-card .tsuchikage {
+  background: linear-gradient(to bottom, white 50%, #524235 50%);
+}
+.our-leaders .leader-container .bio-card .details {
+  margin: 1rem 0rem;
+  text-align: center;
+  line-height: 2.4rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  background-color: #fcba21;
+  color: black;
+}
+footer img {
+  width: 6rem;
+  height: 6rem;
+}
+footer p {
+  font-size: 1.6rem;
+  font-family: "Dosis", sans-serif;
+}
+footer .footer-option {
+  margin-top: 1rem;
+}
+footer .footer-option a {
+  border-right: 1px solid black;
+  font-size: 1.6rem;
+  font-family: "Dosis", sans-serif;
+  text-decoration: none;
+  color: black;
+  margin: 0rem 1rem;
+  padding-right: 2rem;
+}
+
+.contact-us {
+  background-image: url("./src/background/map.jpg");
+  height: 79.2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-us .our-details {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+.contact-us .our-details h2 {
+  font-family: "Nova Square", sans-serif;
+  font-size: 2.8rem;
+  padding-bottom: 1rem;
+}
+.contact-us .our-details .phone-number,
+.contact-us .our-details address,
+.contact-us .our-details p {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+.contact-us .our-details p a {
+  font-size: 1.7rem;
+  color: white;
+}
+.contact-us .contact-form {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact-us .contact-form label {
+  display: none;
+}
+.contact-us .contact-form .personal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+.contact-us .contact-form .personal-details .name,
+.contact-us .contact-form .personal-details .email,
+.contact-us .contact-form .personal-details .tel {
+  position: relative;
+}
+.contact-us .contact-form .personal-details .name input,
+.contact-us .contact-form .personal-details .email input,
+.contact-us .contact-form .personal-details .tel input {
+  border-radius: 5px;
+  height: 5rem;
+  width: 40rem;
+  border: none;
+  padding-left: 1rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+}
+.contact-us .contact-form .personal-details .name ::-moz-placeholder, .contact-us .contact-form .personal-details .email ::-moz-placeholder, .contact-us .contact-form .personal-details .tel ::-moz-placeholder {
+  padding-right: 1rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 5%;
+}
+.contact-us .contact-form .personal-details .name ::placeholder,
+.contact-us .contact-form .personal-details .email ::placeholder,
+.contact-us .contact-form .personal-details .tel ::placeholder {
+  padding-right: 1rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 5%;
+}
+.contact-us .contact-form .personal-details .name img,
+.contact-us .contact-form .personal-details .email img,
+.contact-us .contact-form .personal-details .tel img {
+  position: absolute;
+  left: 1%;
+  top: 33%;
+  width: 20px;
+  height: 20px;
+}
+.contact-us .contact-form .personal-message textarea {
+  border-radius: 5px;
+  padding: 1rem;
+  width: 40rem;
+  height: 100%;
+}
+.contact-us .button-wrap {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us .button-wrap .button {
+  width: 200px;
+  height: 60px;
+  font-family: "Dosis", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #fcba21;
+  background: linear-gradient(90deg, rgba(252, 186, 33, 0.8) 0%, rgb(252, 186, 33) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(252, 186, 33, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+.contact-us .button-wrap .button::before {
+  content: "";
+  border-radius: 1000px;
+  width: 212px;
+  height: 72px;
+  border: 6px solid #fcba21;
+  box-shadow: 0 0 60px rgba(252, 186, 33, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.contact-us .button-wrap .button:hover, .contact-us .button-wrap .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+.contact-us .button-wrap .button:hover::before, .contact-us .button-wrap .button:focus::before {
+  opacity: 1;
+}
+.contact-us .button-wrap .button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #fcba21;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+.contact-us .button-wrap .button:hover::after, .contact-us .button-wrap .button:focus::after {
+  animation: none;
+  display: none;
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.project-video {
+  width: 100%;
+  height: 79vh;
+}
+.project-video section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.project-video section video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 1s ease-in-out; /* Added transition for the video */
+}
+.project-video section .navigation {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.project-video section .navigation li {
+  list-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.project-video section .navigation li img {
+  height: 10rem;
+  width: 15rem;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-video section .navigation li:hover {
+  opacity: 1;
+  transition: 0.2s;
+  transform: scale(1.1);
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0rem 1rem;
+}
+.project-video section .navigation li.active {
+  opacity: 1;
+  transition: 0.2s;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fcba21;
+}/*# sourceMappingURL=style.css.map */

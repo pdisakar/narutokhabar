@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konoha</title>
+    <script src="my-script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="page-title">
+      <a href="./index.html">
+        <img src="./src/logo/logo.png" alt="Naruto Khabar" />
+        <h1>Naruto Khabar</h1>
+      </a>
+    </header>
+    <nav class="nav-bar">
+      <ul>
+        <li><span></span><a href="#">Konoha</a></li>
+        <li><span></span><a href="#">Senoga</a></li>
+        <li><span></span><a href="#">Kumoga</a></li>
+        <li><span></span><a href="#">Iwaga</a></li>
+        <li><span></span><a href="#">Kiriga</a></li>
+      </ul>
+    </nav>
+
+    <div class="project-video">
+      <section>
+        <video id="video-slider" autoplay muted loop>
+          <source src="./src/videos/konoha/1.mp4" type="video/mp4" />
+        </video>
+        <ul class="navigation">
+          <li class="active"  onclick="videoURL('./src/videos/konoha/1.mp4')"><img  src="./src/thumbnail/konoha/1.jpg" alt="#" /></li>
+          <li onclick="videoURL('./src/videos/konoha/2.mp4')"><img src="./src/thumbnail/konoha/2.jpg" alt="#" /></li>
+          <li onclick="videoURL('./src/videos/konoha/3.mp4')"><img src="./src/thumbnail/konoha/3.jpg" alt="#" /></li>
+          <li onclick="videoURL('./src/videos/konoha/4.mp4')"><img src="./src/thumbnail/konoha/4.jpg" alt="#" /></li>
+        </ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
