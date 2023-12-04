@@ -1,15 +1,17 @@
+
+// For Video slider
+console.log('Hey')
+
 function videoURL(videolink, index) {
   const videoElement = document.getElementById("video-slider");
   videoElement.src = videolink;
   videoElement.play();
 
-  // Remove 'active' class from all thumbnails
   const thumbnails = document.querySelectorAll(".navigation li");
   thumbnails.forEach((thumbnail) => {
     thumbnail.classList.remove("active");
   });
 
-  // Add 'active' class to the selected thumbnail
   thumbnails[index].classList.add("active");
 }
 
@@ -28,12 +30,10 @@ function changeVideo() {
 
   videoElement.classList.add("playing");
 
-  // Listen for the 'ended' event to remove the class when the video ends
   videoElement.addEventListener("ended", function () {
     videoElement.classList.remove("playing");
   });
 
-  // Toggle the 'active' class for the current thumbnail
   const thumbnails = document.querySelectorAll(".navigation li");
   thumbnails.forEach((thumbnail, index) => {
     if (index === currentVideoIndex) {
@@ -45,3 +45,19 @@ function changeVideo() {
 }
 
 setInterval(changeVideo, 5000);
+
+
+// For News Body
+console.log("Hey ");
+// Add a script tag at the end of your body or in your external JavaScript file
+document.addEventListener("DOMContentLoaded", function () {
+  const articles = document.querySelectorAll(".artical_container article");
+
+  articles.forEach((article) => {
+    const newsBody = article.querySelector(".news-body");
+
+    article.addEventListener("click", function () {
+      newsBody.classList.toggle("hidden");
+    });
+  });
+});
