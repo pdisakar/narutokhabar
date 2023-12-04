@@ -140,7 +140,7 @@ nav ul :hover span {
   transition: all 0.3s ease-in-out;
 }
 .general_news .news_wrapper .artical_container article .artical-image :hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .general_news .news_wrapper .artical_container article .news-title {
   font-size: 1.6rem;
@@ -163,7 +163,7 @@ nav ul :hover span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem; /* Add padding for better readability */
+  padding: 0rem 2rem; /* Add padding for better readability */
   box-sizing: border-box;
   font-size: 1.6rem;
   font-family: "Dosis", sans-serif;
