@@ -43,6 +43,11 @@ h2 {
         margin-bottom: 1rem;
         object-fit: cover;
       }
+      :hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2;
+      }
     }
     .general-info {
       font-size: 1.7rem;
@@ -62,7 +67,6 @@ h2 {
           border: none;
           padding: 0rem 1rem;
           margin-top: 1rem;
-          
         }
       }
     }

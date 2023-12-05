@@ -47,6 +47,11 @@ h2 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.page-container .form .avatar :hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2;
+}
 .page-container .form .general-info {
   font-size: 1.7rem;
   font-family: "Dosis", sans-serif;
