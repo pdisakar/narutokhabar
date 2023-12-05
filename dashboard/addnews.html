@@ -74,6 +74,14 @@
 
           // Check if a file is selected
           if (fileInput.files && fileInput.files[0]) {
+            // Check if the selected file is an image
+            if (!fileInput.files[0].type.startsWith("image/")) {
+              alert("Please upload a valid image file.");
+              // Reset the file input to clear the selected file
+              fileInput.value = "";
+              return;
+            }
+
             var reader = new FileReader();
 
             reader.onload = function (e) {

@@ -44,6 +44,8 @@ h2 {
   width: 15rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page-container .form .general-info {
   font-size: 1.7rem;
