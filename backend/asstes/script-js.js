@@ -31,7 +31,7 @@ window.addEventListener("load", (event) => {
     });
 
   document
-    .querySelector(".button-wrap .button:last-child")
+    .querySelector(".discard-btn")
     .addEventListener("click", function () {
       document.getElementById("name").value = "";
       document.getElementById("news-title").value = "";
