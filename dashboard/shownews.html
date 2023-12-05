@@ -12,7 +12,12 @@
     <div class="all-news-container">
       <div class="add-on-section">
         <p>News Details</p>
-        <a href="#"> Add News</a>
+        <a class="add-news" href="./addnews.html"
+          ><span
+            ><img src="../backend/source/svg/plus-solid.svg" alt=""
+          /></span>
+          Add News
+        </a>
       </div>
       <table class="news-table">
         <tr>
@@ -20,25 +25,29 @@
           <th>News Title</th>
           <th>Published Date</th>
           <th>Remark</th>
+          <th></th>
         </tr>
         <tr>
           <td>1</td>
           <td>Hinata got married with sakar</td>
           <td>12/5/2023</td>
-          <td class="remark">
-            <a class="delete-btn"
-              >delete
+          <td>
+            <a class="delete-btn" href="#">
+              delete
               <span>
                 <img src="../backend/source/svg/trash-solid.svg" alt="" />
               </span>
             </a>
-            <a class="edit-btn"
-              >edit
-              <span
-                ><img
+          </td>
+          <td>
+            <a class="edit-btn" href="./editnews.html">
+              edit
+              <span>
+                <img
                   src="../backend/source/svg/pen-to-square-solid.svg"
                   alt=""
-              /></span>
+                />
+              </span>
             </a>
           </td>
         </tr>
