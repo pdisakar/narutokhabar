@@ -144,14 +144,60 @@ h2 {
   width: -moz-max-content;
   width: max-content;
 }
-.all-news-container .news-table td,
-.all-news-container .news-table th {
+.all-news-container .news-table tr {
+  height: 5rem;
+}
+.all-news-container .news-table tr td,
+.all-news-container .news-table tr th {
   border-bottom: 1px solid white;
   padding: 1rem;
   text-align: left;
 }
-.all-news-container .news-table td .delete-btn,
-.all-news-container .news-table th .delete-btn {
+.all-news-container .news-table tr td .delete-btn,
+.all-news-container .news-table tr th .delete-btn {
   background-color: red;
+}
+.all-news-container .news-table tr td .delete-btn span,
+.all-news-container .news-table tr th .delete-btn span {
+  background-color: red;
+}
+.all-news-container .news-table tr td .edit-btn,
+.all-news-container .news-table tr th .edit-btn {
+  background-color: #fcba21;
+}
+.all-news-container .news-table tr td .edit-btn span,
+.all-news-container .news-table tr th .edit-btn span {
+  background-color: #fcba21;
+}
+.all-news-container .news-table tr td .delete-btn,
+.all-news-container .news-table tr td .edit-btn,
+.all-news-container .news-table tr th .delete-btn,
+.all-news-container .news-table tr th .edit-btn {
   padding: 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  position: relative;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+.all-news-container .news-table tr td .delete-btn span,
+.all-news-container .news-table tr td .edit-btn span,
+.all-news-container .news-table tr th .delete-btn span,
+.all-news-container .news-table tr th .edit-btn span {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.all-news-container .news-table tr td :hover span,
+.all-news-container .news-table tr th :hover span {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
 }/*# sourceMappingURL=style.css.map */
