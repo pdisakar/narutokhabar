@@ -66,7 +66,9 @@
 
       document
         .getElementById("avatarImageUpload")
-        .addEventListener("change", function () {
+        .addEventListener("change", function (event) {
+          event.preventDefault(); // Prevent the default form submission behavior
+
           var fileInput = this;
           var avatarImage = document.getElementById("avatarImage");
 
@@ -95,13 +97,7 @@
 
           document.getElementById("avatarImage").src =
             "../backend/source/upload-img.png";
-
           document.getElementById("avatarImageUpload").value = "";
-
-          document.getElementById("generalImage").src =
-            "../backend/source/default-img.png";
-
-          document.getElementById("generalImageUpload").value = "";
         });
     </script>
   </body>
