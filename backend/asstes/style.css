@@ -39,10 +39,11 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.page-container .form .avatar input {
-  height: 10rem;
-  width: 10rem;
+.page-container .form .avatar img {
+  height: 15rem;
+  width: 15rem;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 .page-container .form .general-info {
   font-size: 1.7rem;
@@ -63,6 +64,7 @@ h2 {
   border-radius: 5px;
   border: none;
   padding: 0rem 1rem;
+  margin-top: 1rem;
 }
 .page-container .form .news-discription-container {
   display: flex;
@@ -78,6 +80,7 @@ h2 {
   border-radius: 5px;
   border: none;
   padding: 1rem;
+  margin-top: 1rem;
 }
 .page-container .form .button-wrap {
   display: flex;

@@ -13,29 +13,30 @@
         <div class="avatar">
           <input
             type="file"
-            id="imageUpload"
-            name="imageUpload"
+            id="avatarImageUpload"
+            name="avatarImageUpload"
             accept="image/*"
             style="display: none"
           />
 
-          <input
+          <img
             class="upload-img"
-            type="image"
             src="../backend/source/upload-img.png"
             id="avatarImage"
           />
-          <label>Choose Avatar</label>
+          <label for="avatarImageUpload">Choose Avatar</label>
         </div>
         <div class="general-info">
+          <!-- Unique ID for the general info file input -->
+          <input
+            type="file"
+            id="generalImageUpload"
+            name="generalImageUpload"
+            accept="image/*"
+            style="display: none"
+          />
+
           <div class="name-container">
-            <input
-              type="file"
-              id="imageUpload"
-              name="imageUpload"
-              accept="image/*"
-              style="display: none"
-            />
             <label for="name">News Title:</label>
             <input type="text" class="name" id="name" />
           </div>
@@ -57,16 +58,16 @@
     </div>
 
     <script>
-      // JavaScript to handle the image click and trigger file input
+      // JavaScript to handle the avatar image click and trigger avatar file input
       document
         .getElementById("avatarImage")
         .addEventListener("click", function () {
-          document.getElementById("imageUpload").click();
+          document.getElementById("avatarImageUpload").click();
         });
 
-      // JavaScript to handle file selection and update image source
+      // JavaScript to handle file selection and update avatar image source
       document
-        .getElementById("imageUpload")
+        .getElementById("avatarImageUpload")
         .addEventListener("change", function () {
           var fileInput = this;
           var avatarImage = document.getElementById("avatarImage");
@@ -76,7 +77,7 @@
             var reader = new FileReader();
 
             reader.onload = function (e) {
-              // Set the image source to the selected file
+              // Set the avatar image source to the selected file
               avatarImage.src = e.target.result;
             };
 

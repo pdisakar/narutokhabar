@@ -36,10 +36,11 @@ h2 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      input {
-        height: 10rem;
-        width: 10rem;
+      img {
+        height: 15rem;
+        width: 15rem;
         border-radius: 5px;
+        margin-bottom: 1rem;
       }
     }
     .general-info {
@@ -59,6 +60,7 @@ h2 {
           border-radius: 5px;
           border: none;
           padding: 0rem 1rem;
+          margin-top: 1rem;
           
         }
       }
@@ -77,6 +79,7 @@ h2 {
         border-radius: 5px;
         border: none;
         padding: 1rem;
+        margin-top: 1rem;
       }
     }
     .button-wrap {
