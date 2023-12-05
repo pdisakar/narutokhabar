@@ -10,7 +10,7 @@
   <body>
     <h2>Add News</h2>
     <div class="page-container">
-      <form action="#" class="form">
+      <form action="your_actual_submit_url" class="form">
         <div class="avatar">
           <input
             type="file"
@@ -18,33 +18,39 @@
             name="avatarImageUpload"
             accept="image/*"
             style="display: none"
+            required
           />
 
           <img
             class="upload-img"
-            src="../backend/source/upload-img.png"
+            src="../backend/source/images/upload-img.png"
             id="avatarImage"
+            alt="Upload Image"
           />
           <label for="avatarImageUpload">Choose Avatar</label>
         </div>
         <div class="general-info">
           <div class="name-container">
             <label for="name">News Title:</label>
-            <input type="text" class="name" id="name" />
+            <input type="text" class="name" id="name" required />
           </div>
           <div class="news-title-container">
             <label for="news-title">Enter Dated</label>
-            <input type="date" class="news-title" id="news-title" />
+            <input type="date" class="news-title" id="news-title" required />
           </div>
         </div>
         <div class="news-discription-container">
-          <label for="news-discription">Enter News Discription:</label>
-          <textarea name="news-discription" id="news-discription"></textarea>
+          <label for="news-discription">Enter News Description:</label>
+          <textarea
+            name="news-discription"
+            id="news-discription"
+            required
+          ></textarea>
         </div>
 
         <div class="button-wrap">
-          <button class="button">Submit</button>
-          <button class="discard-btn">Discard</button>
+          <button class="button" type="submit">Submit</button>
+          <button class="discard-btn" type="button">Discard</button>
         </div>
       </form>
     </div>
