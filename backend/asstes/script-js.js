@@ -1,3 +1,4 @@
+console.log("hey");
 window.addEventListener("load", (event) => {
   document
     .getElementById("avatarImage")
@@ -46,6 +47,7 @@ window.addEventListener("load", (event) => {
 });
 
 function validateForm() {
+  console.log("Hey this ");
   var avatarImageUpload = document.getElementById("avatarImageUpload");
   var nameInput = document.getElementById("name");
   var newsTitleInput = document.getElementById("news-title");

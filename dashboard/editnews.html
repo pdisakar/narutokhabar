@@ -10,7 +10,11 @@
   <body>
     <h2>Edit News</h2>
     <div class="page-container">
-      <form action="your_actual_submit_url" class="form">
+      <form
+        action="your_actual_submit_url"
+        class="form"
+        onsubmit="return validateForm()"
+      >
         <div class="avatar">
           <input
             type="file"
@@ -18,7 +22,6 @@
             name="avatarImageUpload"
             accept="image/*"
             style="display: none"
-            required
           />
 
           <img
@@ -32,20 +35,16 @@
         <div class="general-info">
           <div class="name-container">
             <label for="name">News Title:</label>
-            <input type="text" class="name" id="name" required />
+            <input type="text" class="name" id="name" />
           </div>
           <div class="news-title-container">
             <label for="news-title">Enter Dated</label>
-            <input type="date" class="news-title" id="news-title" required />
+            <input type="date" class="news-title" id="news-title" />
           </div>
         </div>
         <div class="news-discription-container">
           <label for="news-discription">Enter News Description:</label>
-          <textarea
-            name="news-discription"
-            id="news-discription"
-            required
-          ></textarea>
+          <textarea name="news-discription" id="news-discription"></textarea>
         </div>
 
         <div class="button-wrap">

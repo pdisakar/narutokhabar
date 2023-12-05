@@ -10,7 +10,11 @@
   <body>
     <h2>Add News</h2>
     <div class="page-container">
-      <form action="your_actual_submit_url" class="form">
+      <form
+        action="your_actual_submit_url"
+        class="form"
+        onsubmit="return validateForm()"
+      >
         <div class="avatar">
           <input
             type="file"
