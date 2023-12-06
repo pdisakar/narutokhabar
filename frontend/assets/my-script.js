@@ -1,4 +1,3 @@
-
 //------------------------------------- konoha Video Slider ----------------------------------------------
 function videoURL(videolink, index) {
   const videoElement = document.getElementById("video-slider");
@@ -46,7 +45,7 @@ function changeVideo() {
   });
 }
 
-setInterval(changeVideo, 5000)
+setInterval(changeVideo, 5000);
 
 //----------------------------------- For News Body------------------------------------- //
 
@@ -68,12 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-
 });
-
-
-
-
 
 //----------------------------------------- Contact-Form Validation-------------------------------------//
 
@@ -89,7 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.querySelector('input[name="name"]');
     const emailInput = document.querySelector('input[name="email"]');
     const phoneInput = document.querySelector('input[name="phone"]');
-    const messageInput = document.querySelector('textarea[name="your_message"]');
+    const messageInput = document.querySelector(
+      'textarea[name="your_message"]'
+    );
 
     // Reset previous error styles
     resetErrors([nameInput, emailInput, phoneInput, messageInput]);
@@ -108,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
       } else {
         // Validate Phone
-        const phoneRegex = /^\d+$/;
+        const phoneRegex = /^\d{8,12}$/; // Between 8 and 12 digits
         const phoneNumber = phoneInput.value.trim();
         if (!phoneNumber) {
           alert("Phone number is required");
@@ -135,4 +131,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
