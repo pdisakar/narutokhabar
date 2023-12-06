@@ -386,28 +386,25 @@ footer .footer-option a {
   font-size: 1.7rem;
   color: white;
 }
-.contact-us .contact-form {
+.contact-us .contact-form .contact-form-body {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-.contact-us .contact-form label {
-  display: none;
-}
-.contact-us .contact-form .personal-details {
+.contact-us .contact-form .contact-form-body .personal-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
 }
-.contact-us .contact-form .personal-details .name,
-.contact-us .contact-form .personal-details .email,
-.contact-us .contact-form .personal-details .tel {
+.contact-us .contact-form .contact-form-body .personal-details .name,
+.contact-us .contact-form .contact-form-body .personal-details .email,
+.contact-us .contact-form .contact-form-body .personal-details .tel {
   position: relative;
 }
-.contact-us .contact-form .personal-details .name input,
-.contact-us .contact-form .personal-details .email input,
-.contact-us .contact-form .personal-details .tel input {
+.contact-us .contact-form .contact-form-body .personal-details .name input,
+.contact-us .contact-form .contact-form-body .personal-details .email input,
+.contact-us .contact-form .contact-form-body .personal-details .tel input {
   border-radius: 5px;
   height: 5rem;
   width: 40rem;
@@ -417,28 +414,28 @@ footer .footer-option a {
   font-size: 1.5rem;
   padding-left: 3rem;
 }
-.contact-us .contact-form .personal-details .name ::-moz-placeholder, .contact-us .contact-form .personal-details .email ::-moz-placeholder, .contact-us .contact-form .personal-details .tel ::-moz-placeholder {
+.contact-us .contact-form .contact-form-body .personal-details .name ::-moz-placeholder, .contact-us .contact-form .contact-form-body .personal-details .email ::-moz-placeholder, .contact-us .contact-form .contact-form-body .personal-details .tel ::-moz-placeholder {
   padding-right: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
 }
-.contact-us .contact-form .personal-details .name ::placeholder,
-.contact-us .contact-form .personal-details .email ::placeholder,
-.contact-us .contact-form .personal-details .tel ::placeholder {
+.contact-us .contact-form .contact-form-body .personal-details .name ::placeholder,
+.contact-us .contact-form .contact-form-body .personal-details .email ::placeholder,
+.contact-us .contact-form .contact-form-body .personal-details .tel ::placeholder {
   padding-right: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
 }
-.contact-us .contact-form .personal-details .name img,
-.contact-us .contact-form .personal-details .email img,
-.contact-us .contact-form .personal-details .tel img {
+.contact-us .contact-form .contact-form-body .personal-details .name img,
+.contact-us .contact-form .contact-form-body .personal-details .email img,
+.contact-us .contact-form .contact-form-body .personal-details .tel img {
   position: absolute;
   left: 1%;
   top: 33%;
   width: 20px;
   height: 20px;
 }
-.contact-us .contact-form .personal-message textarea {
+.contact-us .contact-form .contact-form-body .personal-message textarea {
   border-radius: 5px;
   padding: 1rem;
   width: 40rem;

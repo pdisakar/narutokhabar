@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <link rel="stylesheet" href="./frontend/assets/style.css" />
-    <script src="./frontend/frontend/assets/my-script.js"></script>
+    <script src="./frontend/assets/my-script.js"></script>
   </head>
   <body>
     <header class="page-title">
@@ -33,43 +33,43 @@
         <address>Balaju, Kathmandu, Nepal</address>
       </div>
       <form action="#" class="contact-form">
-        <div class="personal-details">
-          <div class="name">
-            <input type="text" name="name" placeholder="Enter Your Name" />
-            <img src="./frontend/src/svg/user-solid.svg" alt="">
+        <div class="contact-form-body">
+          <div class="personal-details">
+            <div class="name">
+              <input type="text" name="name" placeholder="Enter Your Name" />
+              <img src="./frontend/src/svg/user-solid.svg" alt="" />
+            </div>
+            <div class="email">
+              <input type="email" name="email" placeholder="Enter Your Email" />
+              <img src="./frontend/src/svg/envelope-regular.svg" alt="" />
+            </div>
+            <div class="tel">
+              <input type="tel" name="phone" placeholder="Enter Your Number" />
+              <img src="./frontend/src/svg/phone-solid.svg" alt="" />
+            </div>
           </div>
-          <div class="email">
-            <input type="email" name="email"  placeholder="Enter Your Email" />
-            <img src="./frontend/src/svg/envelope-regular.svg" alt="">
-          </div>
-          <div class="tel">
-            <input type="tel" name="phone" placeholder="Enter Your Number" />
-            <img src="./frontend/src/svg/phone-solid.svg" alt="">
+          <div class="personal-message">
+            <textarea
+              name="your_message"
+              id="your_message"
+              placeholder="Place Your Message Here"
+            ></textarea>
           </div>
         </div>
-        <div class="personal-message">
-          <textarea
-            name="your_message"
-            id="your_message"
-            placeholder="Place Your Message Here"
-          ></textarea>
+        <div class="button-wrap">
+          <button class="button">Submit</button>
         </div>
       </form>
-
-      <div class="button-wrap">
-        <button class="button">Submit</button>
-      </div>
     </div>
 
     <footer>
       <img src="./frontend/src/logo/logo.png" alt="Naruto Khabar" />
       <p>Copyright &copy; 2023 Naruto Khabar</p>
       <div class="footer-option">
-        <a href="./contactus.html">Contect Us</a>
+        <a href="./contactus.html">Contact Us</a>
         <a href="#">Our Policies</a>
         <a href="#">About Us</a>
       </div>
-  
     </footer>
   </body>
 </html>
