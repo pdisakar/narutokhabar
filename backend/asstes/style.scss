@@ -60,6 +60,9 @@ h2 {
       .news-title-container {
         display: flex;
         flex-direction: column;
+        .error-message{
+          color: red;
+        }
         input {
           height: 3rem;
           width: 40rem;
@@ -77,6 +80,9 @@ h2 {
       font-family: "Dosis", sans-serif;
       width: 100%;
       margin-top: 1rem;
+      .error-message{
+        color: red;
+      }
 
       textarea {
         width: 100%;

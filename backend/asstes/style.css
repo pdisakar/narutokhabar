@@ -64,6 +64,10 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+.page-container .form .general-info .name-container .error-message,
+.page-container .form .general-info .news-title-container .error-message {
+  color: red;
+}
 .page-container .form .general-info .name-container input,
 .page-container .form .general-info .news-title-container input {
   height: 3rem;
@@ -80,6 +84,9 @@ h2 {
   font-family: "Dosis", sans-serif;
   width: 100%;
   margin-top: 1rem;
+}
+.page-container .form .news-discription-container .error-message {
+  color: red;
 }
 .page-container .form .news-discription-container textarea {
   width: 100%;

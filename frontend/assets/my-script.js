@@ -70,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Validate Name
     if (!nameInput.value.trim()) {
-      errorMessages.push("Name is required *");
+      errorMessages.push("* Name is required");
       isValid = false;
     }
 
     // Validate Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
-      errorMessages.push("Invalid email address *");
+      errorMessages.push("* Invalid email address");
       isValid = false;
     }
 
@@ -85,16 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneRegex = /^\d{8,12}$/; // Between 8 and 12 digits
     const phoneNumber = phoneInput.value.trim();
     if (!phoneNumber) {
-      errorMessages.push("Phone number is required *");
+      errorMessages.push("* Phone number is required");
       isValid = false;
     } else if (!phoneRegex.test(phoneNumber)) {
-      errorMessages.push("Phone number should be between 8 and 12 digits long");
+      errorMessages.push("* Phone number should be between 8 and 12 digits long");
       isValid = false;
     }
 
     // Validate Message
     if (!messageInput.value.trim()) {
-      errorMessages.push("Message is required *");
+      errorMessages.push("* Message is required");
       isValid = false;
     }
 
@@ -131,14 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getInputForErrorMessage(errorMessage) {
     switch (errorMessage) {
-      case "Name is required *":
+      case "* Name is required":
         return document.querySelector('input[name="name"]');
-      case "Invalid email address *":
+      case "* Invalid email address":
         return document.querySelector('input[name="email"]');
-      case "Phone number is required *":
-      case "Phone number should be between 8 and 12 digits long":
+      case "* Phone number is required":
+      case "* Phone number should be between 8 and 12 digits long":
         return document.querySelector('input[name="phone"]');
-      case "Message is required *":
+      case "* Message is required":
         return document.querySelector('textarea[name="your_message"]');
       default:
         return null;
