@@ -163,7 +163,7 @@ nav ul :hover span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0rem 2rem; /* Add padding for better readability */
+  padding: 0rem 2rem;
   box-sizing: border-box;
   font-size: 1.6rem;
   font-family: "Dosis", sans-serif;
@@ -415,12 +415,12 @@ footer .footer-option a {
   padding-left: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
+  padding-left: 3rem;
 }
 .contact-us .contact-form .personal-details .name ::-moz-placeholder, .contact-us .contact-form .personal-details .email ::-moz-placeholder, .contact-us .contact-form .personal-details .tel ::-moz-placeholder {
   padding-right: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
-  padding-left: 5%;
 }
 .contact-us .contact-form .personal-details .name ::placeholder,
 .contact-us .contact-form .personal-details .email ::placeholder,
@@ -428,7 +428,6 @@ footer .footer-option a {
   padding-right: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
-  padding-left: 5%;
 }
 .contact-us .contact-form .personal-details .name img,
 .contact-us .contact-form .personal-details .email img,
@@ -536,7 +535,7 @@ footer .footer-option a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: opacity 1s ease-in-out; /* Added transition for the video */
+  transition: opacity 1s ease-in-out;
 }
 .project-video section .navigation {
   position: absolute;
