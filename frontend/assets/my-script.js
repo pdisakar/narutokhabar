@@ -1,4 +1,3 @@
-//------------------------------------- konoha Video Slider ----------------------------------------------
 function videoURL(videolink, index) {
   const videoElement = document.getElementById("video-slider");
   videoElement.src = videolink;
@@ -47,28 +46,6 @@ function changeVideo() {
 
 setInterval(changeVideo, 5000);
 
-//----------------------------------- For News Body------------------------------------- //
-
-document.addEventListener("DOMContentLoaded", function () {
-  const articles = document.querySelectorAll(".artical_container article");
-
-  articles.forEach((article) => {
-    const newsBody = article.querySelector(".news-body");
-
-    article.addEventListener("click", function () {
-      // Toggle the visibility of the clicked article's news body
-      newsBody.classList.toggle("hidden");
-
-      // Close other articles if they are open
-      articles.forEach((otherArticle) => {
-        if (otherArticle !== article) {
-          otherArticle.querySelector(".news-body").classList.add("hidden");
-        }
-      });
-    });
-  });
-});
-
 //----------------------------------------- Contact-Form Validation-------------------------------------//
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".contact-form");
@@ -84,12 +61,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.querySelector('input[name="email"]');
     const phoneInput = document.querySelector('input[name="phone"]');
     const messageInput = document.querySelector('textarea[name="your_message"]');
-
+    
     // Reset previous error styles
     resetErrors([nameInput, emailInput, phoneInput, messageInput]);
 
     let isValid = true;
-
+    
     // Validate Name
     if (!nameInput.value.trim()) {
       alert("Name is required");
@@ -119,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
-
+    
     return isValid;
   }
 
@@ -128,4 +105,50 @@ document.addEventListener("DOMContentLoaded", function () {
       element.classList.remove("error-input");
     });
   }
+});
+
+//----------------------------------- For News Body------------------------------------- //
+
+document.addEventListener("DOMContentLoaded", function () {
+  const articles = document.querySelectorAll(".artical_container article");
+
+  // Function to hide the active news body
+  function hideActiveNewsBody() {
+    articles.forEach((article) => {
+      const newsBody = article.querySelector(".news-body");
+      newsBody.classList.add("hidden");
+    });
+  }
+
+  articles.forEach((article) => {
+    const newsBody = article.querySelector(".news-body");
+
+    article.addEventListener("click", function (event) {
+      // Prevent the click event from propagating to the document body
+      event.stopPropagation();
+
+      // Toggle the visibility of the clicked article's news body
+      newsBody.classList.toggle("hidden");
+
+      // Close other articles if they are open
+      articles.forEach((otherArticle) => {
+        if (otherArticle !== article) {
+          otherArticle.querySelector(".news-body").classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Add click event listener to the document body
+  document.body.addEventListener("click", function () {
+    hideActiveNewsBody();
+  });
+
+  // Add keydown event listener to the document body
+  document.body.addEventListener("keydown", function (event) {
+    // Check if the pressed key is the "Esc" key (code 27)
+    if (event.key === "Escape" || event.keyCode === 27) {
+      hideActiveNewsBody();
+    }
+  });
 });
