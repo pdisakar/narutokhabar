@@ -401,6 +401,28 @@ footer .footer-option a {
 .contact-us .contact-form .contact-form-body .personal-details .email,
 .contact-us .contact-form .contact-form-body .personal-details .tel {
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.contact-us .contact-form .contact-form-body .personal-details .name span,
+.contact-us .contact-form .contact-form-body .personal-details .email span,
+.contact-us .contact-form .contact-form-body .personal-details .tel span {
+  color: red;
+  margin: 2px 0px 0px 2px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  transform: translateX(-10px);
+  animation: slideIn 0.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .contact-us .contact-form .contact-form-body .personal-details .name input,
 .contact-us .contact-form .contact-form-body .personal-details .email input,
@@ -412,7 +434,6 @@ footer .footer-option a {
   padding-left: 1rem;
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
-  padding-left: 3rem;
 }
 .contact-us .contact-form .contact-form-body .personal-details .name ::-moz-placeholder, .contact-us .contact-form .contact-form-body .personal-details .email ::-moz-placeholder, .contact-us .contact-form .contact-form-body .personal-details .tel ::-moz-placeholder {
   padding-right: 1rem;
@@ -434,6 +455,28 @@ footer .footer-option a {
   top: 33%;
   width: 20px;
   height: 20px;
+}
+.contact-us .contact-form .contact-form-body .personal-message {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us .contact-form .contact-form-body .personal-message span {
+  color: red;
+  margin: 2px 0px 0px 2px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  transform: translateX(-10px);
+  animation: slideIn 0.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .contact-us .contact-form .contact-form-body .personal-message textarea {
   border-radius: 5px;

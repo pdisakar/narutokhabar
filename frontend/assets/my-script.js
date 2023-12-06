@@ -61,49 +61,88 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.querySelector('input[name="email"]');
     const phoneInput = document.querySelector('input[name="phone"]');
     const messageInput = document.querySelector('textarea[name="your_message"]');
-    
+
     // Reset previous error styles
     resetErrors([nameInput, emailInput, phoneInput, messageInput]);
 
     let isValid = true;
-    
+    const errorMessages = [];
+
     // Validate Name
     if (!nameInput.value.trim()) {
-      alert("Name is required");
+      errorMessages.push("Name is required *");
       isValid = false;
-    } else {
-      // Validate Email
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value.trim())) {
-        alert("Invalid email address");
-        isValid = false;
-      } else {
-        // Validate Phone
-        const phoneRegex = /^\d{8,12}$/; // Between 8 and 12 digits
-        const phoneNumber = phoneInput.value.trim();
-        if (!phoneNumber) {
-          alert("Phone number is required");
-          isValid = false;
-        } else if (!phoneRegex.test(phoneNumber)) {
-          alert("Phone number should be between 8 and 12 digits long");
-          isValid = false;
-        } else {
-          // Validate Message
-          if (!messageInput.value.trim()) {
-            alert("Message is required");
-            isValid = false;
-          }
-        }
-      }
     }
-    
+
+    // Validate Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      errorMessages.push("Invalid email address *");
+      isValid = false;
+    }
+
+    // Validate Phone
+    const phoneRegex = /^\d{8,12}$/; // Between 8 and 12 digits
+    const phoneNumber = phoneInput.value.trim();
+    if (!phoneNumber) {
+      errorMessages.push("Phone number is required *");
+      isValid = false;
+    } else if (!phoneRegex.test(phoneNumber)) {
+      errorMessages.push("Phone number should be between 8 and 12 digits long");
+      isValid = false;
+    }
+
+    // Validate Message
+    if (!messageInput.value.trim()) {
+      errorMessages.push("Message is required *");
+      isValid = false;
+    }
+
+    // Display accumulated error messages
+    if (!isValid) {
+      displayErrorMessages(errorMessages);
+    }
+
     return isValid;
   }
 
   function resetErrors(elements) {
     elements.forEach((element) => {
       element.classList.remove("error-input");
+      const errorContainer = element.parentElement.querySelector(".error-message");
+      if (errorContainer) {
+        errorContainer.remove();
+      }
     });
+  }
+
+  function displayErrorMessages(messages) {
+    messages.forEach((message, index) => {
+      const inputElement = getInputForErrorMessage(message);
+      inputElement.classList.add("error-input");
+
+     // Create a span for the error message and insert it after the input field
+     const errorContainer = document.createElement("span");
+     errorContainer.classList.add("error-message");
+     errorContainer.textContent = message;
+     inputElement.insertAdjacentElement("afterend", errorContainer);
+    });
+  }
+
+  function getInputForErrorMessage(errorMessage) {
+    switch (errorMessage) {
+      case "Name is required *":
+        return document.querySelector('input[name="name"]');
+      case "Invalid email address *":
+        return document.querySelector('input[name="email"]');
+      case "Phone number is required *":
+      case "Phone number should be between 8 and 12 digits long":
+        return document.querySelector('input[name="phone"]');
+      case "Message is required *":
+        return document.querySelector('textarea[name="your_message"]');
+      default:
+        return null;
+    }
   }
 });
 
