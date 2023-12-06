@@ -32,6 +32,9 @@ window.addEventListener("load", (event) => {
     document.getElementById("news-title").value = "";
     document.getElementById("news-discription").value = "";
 
+    // Restore original labels
+    restoreOriginalLabels();
+
     // Keep image source as "../backend/source/images/upload-img.png"
     document.getElementById("avatarImage").src = "../backend/source/images/upload-img.png";
     document.getElementById("avatarImageUpload").value = "";
@@ -42,6 +45,20 @@ window.addEventListener("load", (event) => {
     // Remove any existing error styles and messages
     resetErrors();
   });
+
+  // Function to restore original labels
+  function restoreOriginalLabels() {
+    const inputElements = document.querySelectorAll('.form input');
+    
+    inputElements.forEach((inputElement) => {
+      const labelElement = document.querySelector(`label[for="${inputElement.id}"]`);
+      if (labelElement && labelElement.hasAttribute("data-original-label")) {
+        labelElement.textContent = labelElement.getAttribute("data-original-label");
+        labelElement.classList.remove("error-message");
+        labelElement.removeAttribute("data-original-label");
+      }
+    });
+  }
 
   // Function to reset error styles and messages
   function resetErrors() {
@@ -59,8 +76,7 @@ window.addEventListener("load", (event) => {
 
 
 
-
-// --------------------------validation-----------------------
+// --------------------------validation--------------------
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form");

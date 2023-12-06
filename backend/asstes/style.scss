@@ -9,7 +9,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: #7c6ec1;
+  background-color: #7df292;
 }
 h2 {
   text-align: center;
@@ -36,6 +36,9 @@ h2 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      .error-message{
+        color: red;
+      }
       img {
         height: 15rem;
         width: 15rem;

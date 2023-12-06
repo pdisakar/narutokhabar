@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: #7c6ec1;
+  background-color: #7df292;
 }
 
 h2 {
@@ -38,6 +38,9 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page-container .form .avatar .error-message {
+  color: red;
 }
 .page-container .form .avatar img {
   height: 15rem;
