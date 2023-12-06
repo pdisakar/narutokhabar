@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //----------------------------------------- Contact-Form Validation-------------------------------------//
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".contact-form");
   form.addEventListener("submit", function (event) {
+    // Prevent the form from submitting if validation fails
     if (!validateForm()) {
       event.preventDefault();
     }
@@ -83,9 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.querySelector('input[name="name"]');
     const emailInput = document.querySelector('input[name="email"]');
     const phoneInput = document.querySelector('input[name="phone"]');
-    const messageInput = document.querySelector(
-      'textarea[name="your_message"]'
-    );
+    const messageInput = document.querySelector('textarea[name="your_message"]');
 
     // Reset previous error styles
     resetErrors([nameInput, emailInput, phoneInput, messageInput]);
@@ -110,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
           alert("Phone number is required");
           isValid = false;
         } else if (!phoneRegex.test(phoneNumber)) {
-          alert("Phone number should contain only digits");
+          alert("Phone number should be between 8 and 12 digits long");
           isValid = false;
         } else {
           // Validate Message
