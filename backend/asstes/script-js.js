@@ -48,8 +48,8 @@ window.addEventListener("load", (event) => {
 
   // Function to restore original labels
   function restoreOriginalLabels() {
-    const inputElements = document.querySelectorAll('.form input');
-    
+    const inputElements = document.querySelectorAll('.form input, .form textarea'); // Include textarea in the selection
+  
     inputElements.forEach((inputElement) => {
       const labelElement = document.querySelector(`label[for="${inputElement.id}"]`);
       if (labelElement && labelElement.hasAttribute("data-original-label")) {
