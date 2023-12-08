@@ -9,7 +9,8 @@
 
 html {
   font-size: 62.5%;
-  background-color: #abcdef}
+  background-color: #abcdef;
+}
 h2 {
   text-align: center;
   padding: 3rem 0rem;
@@ -99,6 +100,8 @@ h2 {
         border: none;
         padding: 1rem;
         margin-top: 1rem;
+        font-size: 1.7rem;
+        font-family: "Dosis", sans-serif;
       }
     }
     .button-wrap {
