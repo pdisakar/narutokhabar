@@ -60,7 +60,8 @@ html {
   justify-content: space-between;
   gap: 5rem;
 }
-.main .login .form .btns .btn-login {
+.main .login .form .btns button {
+  border: none;
   background: none;
   text-decoration: none;
   color: white;
@@ -70,6 +71,9 @@ html {
   transition: 0.5s;
   font-size: 1.7rem;
   font-family: "Dosis", sans-serif;
+}
+.main .login .form .btns :hover {
+  cursor: pointer;
 }
 .main .login .form .btns .forgot {
   text-decoration: none;

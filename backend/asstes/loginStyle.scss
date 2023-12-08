@@ -58,7 +58,8 @@ html {
         display: flex;
         justify-content: space-between;
         gap: 5rem;
-        .btn-login {
+        button {
+          border: none;
           background: none;
           text-decoration: none;
           color: white;
@@ -68,6 +69,9 @@ html {
           transition: 0.5s;
           font-size: 1.7rem;
           font-family: "Dosis", sans-serif;
+        }
+        & :hover {
+          cursor: pointer;
         }
 
         .forgot {

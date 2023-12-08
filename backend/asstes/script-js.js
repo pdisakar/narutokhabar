@@ -397,22 +397,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // --------------loginformvalisation------------
 
+
+var usernameInput = document.getElementById("username");
+var passwordInput = document.getElementById("password");
+
+// Add keydown event listener to the password input
+passwordInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        // Prevent the default behavior of the Enter key (submitting the form)
+        event.preventDefault();
+
+        // Call the loginValidation function when Enter is pressed
+        loginValidation();
+    }
+});
+
 function loginValidation() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+    var username = usernameInput.value;
+    var password = passwordInput.value;
 
-  var usernameplace = document.getElementById("username");
-  var passwordplace = document.getElementById("password");
+    if (username.trim() === "" || password.trim() === "") {
+        usernameInput.placeholder = "Please Enter Username *";
+        passwordInput.placeholder = "Please Enter Password *";
 
-  if (username.trim() === "" || password.trim() === "") {
-    usernameplace.placeholder = "Please Enter Username *";
-    passwordplace.placeholder = "Please Enter Password *";
+        usernameInput.classList.add("error-placeholder");
+        passwordInput.classList.add("error-placeholder");
 
-    usernameplace.classList.add("error-placeholder");
-    passwordplace.classList.add("error-placeholder");
+        return false;
+    }
 
-    return false;
-  }
-
-  alert("Login successful!");
+    alert("Login successful!");
 }
