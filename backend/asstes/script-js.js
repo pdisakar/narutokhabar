@@ -396,22 +396,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // --------------loginformvalisation------------
-function loginvalidateForm() {
-  var emailInput = document.getElementById("email");
-  var passwordInput = document.getElementById("password");
 
-  var loginerror = [];
+function loginValidation() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
   
-  if (emailInput.value.trim() === "") {
-    emailInput.setAttribute("placeholder", "Email is required *");
-    emailInput.classList += "error-message"
-    return;
-  }
-  if (passwordInput.value.trim() === "") {
-    passwordInput.setAttribute("placeholder", "Password is required *");
-    return;
+  var usernameplace = document.getElementById("username");
+  var passwordplace = document.getElementById("password");
+
+  if(username.trim() === "" || password.trim() === ""){
+    usernameplace.placeholder = "Please Enter Username *";
+    passwordplace.placeholder = "Please Enter Password *";
+    return false;
   }
 
-  console.log("Hey");
-  freeze(50);
+
+
+  alert("Login successful!");
 }

@@ -11,27 +11,30 @@
         <div class="head">
           <h2>Naruto Khabar</h2>
         </div>
+
         <form action="" class="form">
-          <form>
-            <input
-              type="text"
-              placeholder="Username"
-              class="text"
-              id="username"
-              required
-            /><br />
-            <input
-              type="password"
-              placeholder="••••••••••••••"
-              class="password"
-            /><br />
-            <div class="btns">
-              <a href="#" class="btn-login" id="do-login">Login</a>
-              <a href="#" class="forgot">Forgot password?</a>
-            </div>
-          </form>
+          <input
+            type="text"
+            placeholder="Username"
+            class="text"
+            id="username"
+            required
+          /><br />
+          <input
+            type="password"
+            placeholder="••••••••••••••"
+            class="password"
+            id="password"
+            required
+          /><br />
+          <div class="btns">
+            <a href="#" class="btn-login" onclick="loginValidation()">Login</a>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
         </form>
+        <p>Hello Chief Welcome to <a href="../index.html">Nauto News. </a></p>
       </div>
     </div>
+    <script src="../backend/asstes/script-js.js"></script>
   </body>
 </html>

@@ -24,7 +24,6 @@ html {
       0px 10px 20px rgba(0, 0, 0, 0.3), 0px 30px 60px 1px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 5rem;
-    width: 40rem;
     .head {
       h2 {
         font-family: "Nova Square", sans-serif;
@@ -50,10 +49,12 @@ html {
       & ::placeholder {
         color: #d3d3d3;
       }
+     
       .btns {
         margin-top: 1rem;
         display: flex;
         justify-content: space-between;
+        gap: 5rem;
         .btn-login {
           background: none;
           text-decoration: none;
@@ -72,6 +73,18 @@ html {
           font-size: 1.7rem;
           font-family: "Dosis", sans-serif;
         }
+      }
+    }
+    p{
+      margin-top: 2rem;
+      text-align: center;
+      color: red;
+      color: white;
+      font-size: 1.7rem;
+      font-family: "Dosis", sans-serif;
+      a{
+        color: white;
+
       }
     }
   }
