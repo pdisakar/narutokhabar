@@ -2,41 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../backend/asstes/style.css" />
+    <link rel="stylesheet" href="../backend/asstes/loginStyle.css" />
   </head>
   <body>
     <div class="main">
-      <div class="longin-container">
-        <h2>Admin Login</h2>
-        <form id="loginForm">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter Your Email"
-            required
-          />
-
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter Your Password"
-            required
-          />
-
-          <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-          </div>
-
-          <button class="button" onclick="loginvalidateForm()">Login</button>
-
-          <span id="welcomeMessage">Welcome Chif Naruto Khabar is Here</span>
+      <div class="login">
+        <div class="head">
+          <h2>Naruto Khabar</h2>
+        </div>
+        <form action="" class="form">
+          <form>
+            <input
+              type="text"
+              placeholder="Username"
+              class="text"
+              id="username"
+              required
+            /><br />
+            <input
+              type="password"
+              placeholder="••••••••••••••"
+              class="password"
+            /><br />
+            <div class="btns">
+              <a href="#" class="btn-login" id="do-login">Login</a>
+              <a href="#" class="forgot">Forgot password?</a>
+            </div>
+          </form>
         </form>
       </div>
     </div>
-    <script src="../backend/asstes/script-js.js"></script>
   </body>
 </html>

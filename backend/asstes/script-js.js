@@ -397,18 +397,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // --------------loginformvalisation------------
 function loginvalidateForm() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+  var emailInput = document.getElementById("email");
+  var passwordInput = document.getElementById("password");
 
-  if (email.trim() === "") {
-    alert("Email is required");
+  var loginerror = [];
+  
+  if (emailInput.value.trim() === "") {
+    emailInput.setAttribute("placeholder", "Email is required *");
+    emailInput.classList += "error-message"
     return;
   }
-  if (password.trim() === "") {
-    alert("Passowrd is required");
-    return
-  } else {
-    document.getElementById("welcomeMessage").textContent =
-      "Welcome, " + email + "!";
+  if (passwordInput.value.trim() === "") {
+    passwordInput.setAttribute("placeholder", "Password is required *");
+    return;
   }
+
+  console.log("Hey");
+  freeze(50);
 }
