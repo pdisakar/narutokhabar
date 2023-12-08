@@ -1,30 +1,34 @@
 window.addEventListener("load", (event) => {
-  document.getElementById("avatarImage").addEventListener("click", function (e) {
-    e.preventDefault();
-    document.getElementById("avatarImageUpload").click();
-  });
+  document
+    .getElementById("avatarImage")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("avatarImageUpload").click();
+    });
 
-  document.getElementById("avatarImageUpload").addEventListener("change", function (e) {
-    e.preventDefault();
-    var fileInput = this;
-    var avatarImage = document.getElementById("avatarImage");
+  document
+    .getElementById("avatarImageUpload")
+    .addEventListener("change", function (e) {
+      e.preventDefault();
+      var fileInput = this;
+      var avatarImage = document.getElementById("avatarImage");
 
-    if (fileInput.files && fileInput.files[0]) {
-      if (!fileInput.files[0].type.startsWith("image/")) {
-        alert("Please upload a valid image file.");
-        fileInput.value = "";
-        return;
+      if (fileInput.files && fileInput.files[0]) {
+        if (!fileInput.files[0].type.startsWith("image/")) {
+          alert("Please upload a valid image file.");
+          fileInput.value = "";
+          return;
+        }
+
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          e.preventDefault();
+          avatarImage.src = e.target.result;
+        };
+        reader.readAsDataURL(fileInput.files[0]);
       }
-
-      var reader = new FileReader();
-
-      reader.onload = function (e) {
-        e.preventDefault();
-        avatarImage.src = e.target.result;
-      };
-      reader.readAsDataURL(fileInput.files[0]);
-    }
-  });
+    });
 
   document.querySelector(".discard-btn").addEventListener("click", function () {
     // Reset form elements to their default state
@@ -36,10 +40,12 @@ window.addEventListener("load", (event) => {
     restoreOriginalLabels();
 
     // Keep image source as "../backend/source/images/upload-img.png"
-    document.getElementById("avatarImage").src = "../backend/source/images/upload-img.png";
+    document.getElementById("avatarImage").src =
+      "../backend/source/images/upload-img.png";
     document.getElementById("avatarImageUpload").value = "";
 
-    document.getElementById("generalImage").src = "../backend/source/default-img.png";
+    document.getElementById("generalImage").src =
+      "../backend/source/default-img.png";
     document.getElementById("generalImageUpload").value = "";
 
     // Remove any existing error styles and messages
@@ -48,12 +54,18 @@ window.addEventListener("load", (event) => {
 
   // Function to restore original labels
   function restoreOriginalLabels() {
-    const inputElements = document.querySelectorAll('.form input, .form textarea'); // Include textarea in the selection
-  
+    const inputElements = document.querySelectorAll(
+      ".form input, .form textarea"
+    ); // Include textarea in the selection
+
     inputElements.forEach((inputElement) => {
-      const labelElement = document.querySelector(`label[for="${inputElement.id}"]`);
+      const labelElement = document.querySelector(
+        `label[for="${inputElement.id}"]`
+      );
       if (labelElement && labelElement.hasAttribute("data-original-label")) {
-        labelElement.textContent = labelElement.getAttribute("data-original-label");
+        labelElement.textContent = labelElement.getAttribute(
+          "data-original-label"
+        );
         labelElement.classList.remove("error-message");
         labelElement.removeAttribute("data-original-label");
       }
@@ -73,8 +85,6 @@ window.addEventListener("load", (event) => {
     });
   }
 });
-
-
 
 // --------------------------validation--------------------
 
@@ -141,7 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
     errorLabels.forEach((errorLabel) => {
       // Restore the original label text
       const inputId = errorLabel.getAttribute("for");
-      const originalLabel = document.getElementById(inputId).getAttribute("data-original-label");
+      const originalLabel = document
+        .getElementById(inputId)
+        .getAttribute("data-original-label");
       errorLabel.textContent = originalLabel;
       errorLabel.classList.remove("error-message");
     });
@@ -153,9 +165,14 @@ document.addEventListener("DOMContentLoaded", function () {
       inputElement.classList.add("error-input");
 
       // Store the original label text in a data attribute
-      const labelElement = inputElement.closest(".form").querySelector(`label[for="${inputElement.id}"]`);
+      const labelElement = inputElement
+        .closest(".form")
+        .querySelector(`label[for="${inputElement.id}"]`);
       if (labelElement) {
-        labelElement.setAttribute("data-original-label", labelElement.textContent);
+        labelElement.setAttribute(
+          "data-original-label",
+          labelElement.textContent
+        );
 
         // Update the label with the error message
         labelElement.textContent = message;
@@ -178,33 +195,38 @@ document.addEventListener("DOMContentLoaded", function () {
         return null;
     }
   }
-});window.addEventListener("load", (event) => {
-  document.getElementById("avatarImage").addEventListener("click", function (e) {
-    e.preventDefault();
-    document.getElementById("avatarImageUpload").click();
-  });
+});
+window.addEventListener("load", (event) => {
+  document
+    .getElementById("avatarImage")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("avatarImageUpload").click();
+    });
 
-  document.getElementById("avatarImageUpload").addEventListener("change", function (e) {
-    e.preventDefault();
-    var fileInput = this;
-    var avatarImage = document.getElementById("avatarImage");
+  document
+    .getElementById("avatarImageUpload")
+    .addEventListener("change", function (e) {
+      e.preventDefault();
+      var fileInput = this;
+      var avatarImage = document.getElementById("avatarImage");
 
-    if (fileInput.files && fileInput.files[0]) {
-      if (!fileInput.files[0].type.startsWith("image/")) {
-        alert("Please upload a valid image file.");
-        fileInput.value = "";
-        return;
+      if (fileInput.files && fileInput.files[0]) {
+        if (!fileInput.files[0].type.startsWith("image/")) {
+          alert("Please upload a valid image file.");
+          fileInput.value = "";
+          return;
+        }
+
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          e.preventDefault();
+          avatarImage.src = e.target.result;
+        };
+        reader.readAsDataURL(fileInput.files[0]);
       }
-
-      var reader = new FileReader();
-
-      reader.onload = function (e) {
-        e.preventDefault();
-        avatarImage.src = e.target.result;
-      };
-      reader.readAsDataURL(fileInput.files[0]);
-    }
-  });
+    });
 
   document.querySelector(".discard-btn").addEventListener("click", function () {
     // Reset form elements to their default state
@@ -216,10 +238,12 @@ document.addEventListener("DOMContentLoaded", function () {
     restoreOriginalLabels();
 
     // Keep image source as "../backend/source/images/upload-img.png"
-    document.getElementById("avatarImage").src = "../backend/source/images/upload-img.png";
+    document.getElementById("avatarImage").src =
+      "../backend/source/images/upload-img.png";
     document.getElementById("avatarImageUpload").value = "";
 
-    document.getElementById("generalImage").src = "../backend/source/default-img.png";
+    document.getElementById("generalImage").src =
+      "../backend/source/default-img.png";
     document.getElementById("generalImageUpload").value = "";
 
     // Remove any existing error styles and messages
@@ -228,12 +252,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to restore original labels
   function restoreOriginalLabels() {
-    const inputElements = document.querySelectorAll('.form input, .form textarea'); // Include textarea in the selection
-  
+    const inputElements = document.querySelectorAll(
+      ".form input, .form textarea"
+    ); // Include textarea in the selection
+
     inputElements.forEach((inputElement) => {
-      const labelElement = document.querySelector(`label[for="${inputElement.id}"]`);
+      const labelElement = document.querySelector(
+        `label[for="${inputElement.id}"]`
+      );
       if (labelElement && labelElement.hasAttribute("data-original-label")) {
-        labelElement.textContent = labelElement.getAttribute("data-original-label");
+        labelElement.textContent = labelElement.getAttribute(
+          "data-original-label"
+        );
         labelElement.classList.remove("error-message");
         labelElement.removeAttribute("data-original-label");
       }
@@ -253,8 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
 
 // --------------------------validation--------------------
 
@@ -321,7 +349,9 @@ document.addEventListener("DOMContentLoaded", function () {
     errorLabels.forEach((errorLabel) => {
       // Restore the original label text
       const inputId = errorLabel.getAttribute("for");
-      const originalLabel = document.getElementById(inputId).getAttribute("data-original-label");
+      const originalLabel = document
+        .getElementById(inputId)
+        .getAttribute("data-original-label");
       errorLabel.textContent = originalLabel;
       errorLabel.classList.remove("error-message");
     });
@@ -333,9 +363,14 @@ document.addEventListener("DOMContentLoaded", function () {
       inputElement.classList.add("error-input");
 
       // Store the original label text in a data attribute
-      const labelElement = inputElement.closest(".form").querySelector(`label[for="${inputElement.id}"]`);
+      const labelElement = inputElement
+        .closest(".form")
+        .querySelector(`label[for="${inputElement.id}"]`);
       if (labelElement) {
-        labelElement.setAttribute("data-original-label", labelElement.textContent);
+        labelElement.setAttribute(
+          "data-original-label",
+          labelElement.textContent
+        );
 
         // Update the label with the error message
         labelElement.textContent = message;
@@ -360,3 +395,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// --------------loginformvalisation------------
+function loginvalidateForm() {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  if (email.trim() === "") {
+    alert("Email is required");
+    return;
+  }
+  if (password.trim() === "") {
+    alert("Passowrd is required");
+    return
+  } else {
+    document.getElementById("welcomeMessage").textContent =
+      "Welcome, " + email + "!";
+  }
+}
