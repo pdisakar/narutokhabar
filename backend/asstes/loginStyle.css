@@ -48,6 +48,12 @@ html {
 .main .login .form ::placeholder {
   color: #d3d3d3;
 }
+.main .login .form .error-placeholder::-moz-placeholder {
+  color: red;
+}
+.main .login .form .error-placeholder::placeholder {
+  color: red;
+}
 .main .login .form .btns {
   margin-top: 1rem;
   display: flex;

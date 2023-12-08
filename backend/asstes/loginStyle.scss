@@ -49,7 +49,10 @@ html {
       & ::placeholder {
         color: #d3d3d3;
       }
-     
+      .error-placeholder::placeholder {
+        color: red; // Set the color for the placeholder text
+      }
+
       .btns {
         margin-top: 1rem;
         display: flex;
@@ -75,16 +78,15 @@ html {
         }
       }
     }
-    p{
+    p {
       margin-top: 2rem;
       text-align: center;
       color: red;
       color: white;
       font-size: 1.7rem;
       font-family: "Dosis", sans-serif;
-      a{
+      a {
         color: white;
-
       }
     }
   }

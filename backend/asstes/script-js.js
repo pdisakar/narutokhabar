@@ -401,17 +401,18 @@ function loginValidation() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
-  
   var usernameplace = document.getElementById("username");
   var passwordplace = document.getElementById("password");
 
-  if(username.trim() === "" || password.trim() === ""){
+  if (username.trim() === "" || password.trim() === "") {
     usernameplace.placeholder = "Please Enter Username *";
     passwordplace.placeholder = "Please Enter Password *";
+
+    usernameplace.classList.add("error-placeholder");
+    passwordplace.classList.add("error-placeholder");
+
     return false;
   }
-
-
 
   alert("Login successful!");
 }
