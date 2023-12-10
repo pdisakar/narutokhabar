@@ -393,6 +393,10 @@ h2 {
     font-family: "Nova Square", sans-serif;
     font-size: 2.7rem;
     text-align: center;
+    a{
+      text-decoration: none;
+      color: white ;
+    }
   }
   .child-element {
     margin-top: 1rem;
@@ -419,7 +423,7 @@ h2 {
 }
 
 #content {
-  margin-left: 0;
+  margin-left: 0; 
 
   transition: margin-left 0.3s ease;
 }
