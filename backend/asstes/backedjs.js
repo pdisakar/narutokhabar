@@ -431,27 +431,38 @@ function loginValidation() {
 
 // --------------sidebar---------------------------------------
 
-    function toggleNestedChildren(element) {
-      var nestedChildren = element.getElementsByClassName('nested-child');
-
+function toggleNestedChildren(element) {
+  var allChildElements = document.querySelectorAll('.child-element');
+  
+  allChildElements.forEach(function (child) {
+    if (child !== element) {
+      var nestedChildren = child.getElementsByClassName('nested-child');
       for (var i = 0; i < nestedChildren.length; i++) {
-        var displayStyle = window.getComputedStyle(nestedChildren[i]).display;
-        nestedChildren[i].style.display = displayStyle === 'none' ? 'block' : 'none';
+        nestedChildren[i].style.display = 'none';
       }
     }
+  });
 
-    document.getElementById('hamburger').addEventListener('click', function() {
-      var sidebar = document.getElementById('sidebar');
-      var content = document.getElementById('content');
-      var hamburger = document.getElementById('hamburger');
+  var nestedChildren = element.getElementsByClassName('nested-child');
+  for (var i = 0; i < nestedChildren.length; i++) {
+    var displayStyle = window.getComputedStyle(nestedChildren[i]).display;
+    nestedChildren[i].style.display = displayStyle === 'none' ? 'block' : 'none';
+  }
+}
 
-      if (sidebar.style.left === '-200px') {
-        sidebar.style.left = '0';
-        content.style.marginLeft = '200px';
-        hamburger.style.left = '220px';
-      } else {
-        sidebar.style.left = '-200px';
-        content.style.marginLeft = '0';
-        hamburger.style.left = '20px';
-      }
-    });
+document.getElementById('hamburger').addEventListener('click', function() {
+  var sidebar = document.getElementById('sidebar');
+  var content = document.getElementById('content');
+  var hamburger = document.getElementById('hamburger');
+
+  if (sidebar.style.left === '-200px') {
+    sidebar.style.left = '0';
+    content.style.marginLeft = '200px';
+    hamburger.style.left = '220px';
+  } else {
+    sidebar.style.left = '-200px';
+    content.style.marginLeft = '0';
+    hamburger.style.left = '20px';
+  }
+});
+
