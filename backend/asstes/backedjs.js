@@ -402,15 +402,15 @@ var usernameInput = document.getElementById("username");
 var passwordInput = document.getElementById("password");
 
 // Add keydown event listener to the password input
-passwordInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        // Prevent the default behavior of the Enter key (submitting the form)
-        event.preventDefault();
+// passwordInput.addEventListener("keydown", function(event) {
+//     if (event.key === "Enter") {
+//         // Prevent the default behavior of the Enter key (submitting the form)
+//         event.preventDefault();
 
-        // Call the loginValidation function when Enter is pressed
-        loginValidation();
-    }
-});
+//         // Call the loginValidation function when Enter is pressed
+//         loginValidation();
+//     }
+// });
 
 function loginValidation() {
     var username = usernameInput.value;
@@ -428,3 +428,30 @@ function loginValidation() {
 
     alert("Login successful!");
 }
+
+// --------------sidebar---------------------------------------
+
+    function toggleNestedChildren(element) {
+      var nestedChildren = element.getElementsByClassName('nested-child');
+
+      for (var i = 0; i < nestedChildren.length; i++) {
+        var displayStyle = window.getComputedStyle(nestedChildren[i]).display;
+        nestedChildren[i].style.display = displayStyle === 'none' ? 'block' : 'none';
+      }
+    }
+
+    document.getElementById('hamburger').addEventListener('click', function() {
+      var sidebar = document.getElementById('sidebar');
+      var content = document.getElementById('content');
+      var hamburger = document.getElementById('hamburger');
+
+      if (sidebar.style.left === '-200px') {
+        sidebar.style.left = '0';
+        content.style.marginLeft = '200px';
+        hamburger.style.left = '220px';
+      } else {
+        sidebar.style.left = '-200px';
+        content.style.marginLeft = '0';
+        hamburger.style.left = '20px';
+      }
+    });

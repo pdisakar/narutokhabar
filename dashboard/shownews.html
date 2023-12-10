@@ -5,54 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All News</title>
     <link rel="stylesheet" href="../backend/asstes/style.css" />
-    
   </head>
   <body>
-    <h2>All News</h2>
-
-    <div class="all-news-container">
-      <div class="add-on-section">
-        <p>News Details</p>
-        <a class="add-news" href="./addnews.html"
-          ><span
-            ><img src="../backend/source/svg/plus-solid.svg" alt=""
-          /></span>
-          Add News
-        </a>
+    <div id="hamburger">&#9776;</div>
+    <div id="sidebar">
+      <p>Naruto Khabar</p>
+      <div class="child-element" onclick="toggleNestedChildren(this)">
+        News
+        <div class="nested-child"><a href="./addnews.html">Add News</a></div>
+        <div class="nested-child"><a href="./editnews.html">Edit News</a></div>
+        <div class="nested-child"><a href="./shownews.html">All News</a></div>
       </div>
-      <table class="news-table">
-        <tr>
-          <th>ID</th>
-          <th>News Title</th>
-          <th>Published Date</th>
-          <th>Remark</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Hinata got married with sakar</td>
-          <td>12/5/2023</td>
-          <td>
-            <a class="delete-btn" href="#">
-              delete
-              <span>
-                <img src="../backend/source/svg/trash-solid.svg" alt="" />
-              </span>
-            </a>
-          </td>
-          <td>
-            <a class="edit-btn" href="./editnews.html">
-              edit
-              <span>
-                <img
-                  src="../backend/source/svg/pen-to-square-solid.svg"
-                  alt=""
-                />
-              </span>
-            </a>
-          </td>
-        </tr>
-      </table>
+      <div class="child-element" onclick="toggleNestedChildren(this)">
+        Child Element 2
+        <div class="nested-child">Nested Child 1</div>
+        <div class="nested-child">Nested Child 2</div>
+      </div>
+      <div class="child-element">Child Element 3</div>
+      <div class="logout-button">
+        <button>&#x2699; Logout</button>
+      </div>
     </div>
+
+    <div id="content">
+      <h2>All News</h2>
+
+      <div class="all-news-container">
+        <div class="add-on-section">
+          <p>News Details</p>
+          <a class="add-news" href="./addnews.html"
+            ><span
+              ><img src="../backend/source/svg/plus-solid.svg" alt=""
+            /></span>
+            Add News
+          </a>
+        </div>
+        <table class="news-table">
+          <tr>
+            <th>ID</th>
+            <th>News Title</th>
+            <th>Published Date</th>
+            <th>Remark</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Hinata got married with sakar</td>
+            <td>12/5/2023</td>
+            <td>
+              <a class="delete-btn" href="#">
+                delete
+                <span>
+                  <img src="../backend/source/svg/trash-solid.svg" alt="" />
+                </span>
+              </a>
+            </td>
+            <td>
+              <a class="edit-btn" href="./editnews.html">
+                edit
+                <span>
+                  <img
+                    src="../backend/source/svg/pen-to-square-solid.svg"
+                    alt=""
+                  />
+                </span>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="../backend/asstes/backedjs.js"></script>
   </body>
 </html>

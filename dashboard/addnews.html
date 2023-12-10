@@ -3,51 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New Image</title>
     <link rel="stylesheet" href="../backend/asstes/style.css" />
   </head>
   <body>
-    <h2>Add News</h2>
-    <div class="page-container">
-      <form action="your_actual_submit_url" class="form">
-        <div class="avatar">
-          <input
-            type="file"
-            id="avatarImageUpload"
-            name="avatarImageUpload"
-            accept="image/*"
-            style="display: none"
-          />
-
-          <img
-            class="upload-img"
-            src="../backend/source/images/upload-img.png"
-            id="avatarImage"
-            alt="Upload Image"
-          />
-          <label for="avatarImageUpload">Choose Avatar</label>
-        </div>
-        <div class="general-info">
-          <div class="name-container">
-            <label for="name">News Title:</label>
-            <input type="text" class="name" id="name" />
-          </div>
-          <div class="news-title-container">
-            <label for="news-title">Select Date: </label>
-            <input type="date" class="news-title" id="news-title" />
-          </div>
-        </div>
-        <div class="news-discription-container">
-          <label for="news-discription">Enter News Description:</label>
-          <textarea name="news-discription" id="news-discription"></textarea>
-        </div>
-
-        <div class="button-wrap">
-          <button class="button" type="submit">Submit</button>
-          <button class="discard-btn" type="button">Discard</button>
-        </div>
-      </form>
+    <div id="hamburger">&#9776;</div>
+    <div id="sidebar">
+      <p>Naruto Khabar</p>
+      <div class="child-element" onclick="toggleNestedChildren(this)">
+        News
+        <div class="nested-child"><a href="./addnews.html">Add News</a></div>
+        <div class="nested-child"><a href="./editnews.html">Edit News</a></div>
+        <div class="nested-child"><a href="./shownews.html">All News</a></div>
+      </div>
+      <div class="child-element" onclick="toggleNestedChildren(this)">
+        Child Element 2
+        <div class="nested-child">Nested Child 1</div>
+        <div class="nested-child">Nested Child 2</div>
+      </div>
+      <div class="child-element">Child Element 3</div>
+      <div class="logout-button">
+        <button>&#x2699; Logout</button>
+      </div>
     </div>
-    <script src="../backend/asstes/script-js.js"></script>
+
+    <div id="content">
+      <h2>Add News</h2>
+      <div class="page-container">
+        <form action="your_actual_submit_url" class="form">
+          <div class="avatar">
+            <input
+              type="file"
+              id="avatarImageUpload"
+              name="avatarImageUpload"
+              accept="image/*"
+              style="display: none"
+            />
+
+            <img
+              class="upload-img"
+              src="../backend/source/images/upload-img.png"
+              id="avatarImage"
+              alt="Upload Image"
+            />
+            <label for="avatarImageUpload">Choose Avatar</label>
+          </div>
+          <div class="general-info">
+            <div class="name-container">
+              <label for="name">News Title:</label>
+              <input type="text" class="name" id="name" />
+            </div>
+            <div class="news-title-container">
+              <label for="news-title">Select Date: </label>
+              <input type="date" class="news-title" id="news-title" />
+            </div>
+          </div>
+          <div class="news-discription-container">
+            <label for="news-discription">Enter News Description:</label>
+            <textarea name="news-discription" id="news-discription"></textarea>
+          </div>
+
+          <div class="button-wrap">
+            <button class="button" type="submit">Submit</button>
+            <button class="discard-btn" type="button">Discard</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../backend/asstes/backedjs.js"></script>
   </body>
 </html>
