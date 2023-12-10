@@ -151,6 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const articles = document.querySelectorAll(".artical_container article");
 
+  console.log("Articles:", articles);
+
+
   // Function to hide the active news body
   function hideActiveNewsBody() {
     articles.forEach((article) => {
