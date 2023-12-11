@@ -191,12 +191,42 @@ nav ul :hover span {
 .general_news .news_wrapper aside {
   width: 30%;
 }
-.general_news .news_wrapper aside img {
-  width: 100%;
+.general_news .news_wrapper aside .featured_news-container {
+  position: relative;
+  overflow: hidden;
   height: 100%;
+  width: 100%;
+}
+.general_news .news_wrapper aside .featured_news-container .slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: 100%;
+}
+.general_news .news_wrapper aside .featured_news-container .slider img {
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+}
+.general_news .news_wrapper aside .featured_news-container .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.general_news .news_wrapper aside .featured_news-container .dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.general_news .news_wrapper aside .featured_news-container .dots .dot.active {
+  background-color: #555;
 }
 
 .wanted_person {
