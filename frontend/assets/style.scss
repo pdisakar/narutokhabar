@@ -20,7 +20,21 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #f4f4f4;
+    background-image: repeating-linear-gradient(
+        135deg,
+        hsla(35, 0%, 71%, 0.09) 0px,
+        hsla(35, 0%, 71%, 0.09) 1px,
+        transparent 1px,
+        transparent 11px
+      ),
+      repeating-linear-gradient(
+        45deg,
+        hsla(35, 0%, 71%, 0.09) 0px,
+        hsla(35, 0%, 71%, 0.09) 1px,
+        transparent 1px,
+        transparent 11px
+      ),
+      linear-gradient(90deg, hsl(183, 0%, 100%), hsl(183, 0%, 100%));
     color: black;
     text-decoration: none;
     img {
@@ -107,11 +121,22 @@ nav {
 }
 
 .general_news {
-  padding-top: 4rem;
-
-  margin: 0rem 5rem;
-  padding-bottom: 2rem;
-  background-color: #f6fbfc;
+  padding: 4rem;
+  background-image: repeating-linear-gradient(
+      135deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    linear-gradient(90deg, hsl(183, 0%, 100%), hsl(183, 0%, 100%));
   h2 {
     text-align: center;
     font-family: "Nova Square", sans-serif;
@@ -246,7 +271,21 @@ nav {
 .wanted_person {
   padding-bottom: 2rem;
   padding-top: 2rem;
-  background-color: #fcf6f6;
+  background-image: repeating-linear-gradient(
+      135deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    linear-gradient(90deg, hsl(183, 0%, 100%), hsl(183, 0%, 100%));
   h2 {
     text-align: center;
     font-family: "Nova Square", sans-serif;
@@ -306,7 +345,21 @@ nav {
 
 .our-leaders {
   padding-bottom: 4rem;
-  background-color: #fcf6fc;
+  background-image: repeating-linear-gradient(
+      135deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      hsla(35, 0%, 71%, 0.09) 0px,
+      hsla(35, 0%, 71%, 0.09) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    linear-gradient(90deg, hsl(183, 0%, 100%), hsl(183, 0%, 100%));
   h2 {
     text-align: center;
     font-family: "Nova Square", sans-serif;
@@ -719,8 +772,6 @@ footer {
 //   display: block;
 // }
 
-
-
 .konoha-news-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
@@ -736,5 +787,3 @@ footer {
     }
   }
 }
-
-
