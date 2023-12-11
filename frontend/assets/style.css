@@ -51,7 +51,7 @@ nav ul li a {
   color: black;
   margin: 1rem;
 }
-nav ul li span {
+nav ul li a span {
   position: absolute;
   height: 2px;
   background-color: white;
