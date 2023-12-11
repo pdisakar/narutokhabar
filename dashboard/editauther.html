@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Image</title>
     <link rel="stylesheet" href="../backend/asstes/style.css" />
   </head>
   <body>
@@ -29,9 +30,13 @@
       </div>
     </div>
     <div id="content">
-      <h2>Add News</h2>
+      <h2>Edit Authers</h2>
       <div class="page-container">
-        <form action="your_actual_submit_url" class="form">
+        <form
+          action="your_actual_submit_url"
+          class="form"
+          onsubmit="return validateForm()"
+        >
           <div class="avatar">
             <input
               type="file"
@@ -51,16 +56,16 @@
           </div>
           <div class="general-info">
             <div class="name-container">
-              <label for="name">News Title:</label>
+              <label for="name">Auther Name</label>
               <input type="text" class="name" id="name" />
             </div>
             <div class="news-title-container">
-              <label for="news-title">Select Date: </label>
+              <label for="news-title">Auther date of Birth</label>
               <input type="date" class="news-title" id="news-title" />
             </div>
           </div>
           <div class="news-discription-container">
-            <label for="news-discription">Enter News Description:</label>
+            <label for="news-discription">Auther Description:</label>
             <textarea name="news-discription" id="news-discription"></textarea>
           </div>
 
@@ -71,7 +76,6 @@
         </form>
       </div>
     </div>
-
     <script src="../backend/asstes/backedjs.js"></script>
   </body>
 </html>

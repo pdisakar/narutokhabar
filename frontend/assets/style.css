@@ -646,4 +646,21 @@ footer .footer-option a {
   overflow: hidden;
   border-radius: 10px;
   background-color: #fcba21;
+}
+
+.konoha-news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
+  padding: 0rem 3rem;
+}
+.konoha-news-container article {
+  padding: 1rem;
+  text-align: center;
+}
+.konoha-news-container article .artical-image img {
+  width: 29rem;
+  height: 36rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
